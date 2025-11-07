@@ -25,3 +25,6 @@ create table OrderItems(
     foreign key (customerId) references Customer(customerId)
 );
 
+insert into item(name, description, unit_price, item_image) value (
+    'Watermelon', 'Very delicious', 100, 'c:\Users\Student\Documents\images\watermellon.jpg'
+);
