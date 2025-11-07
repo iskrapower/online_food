@@ -2,6 +2,7 @@ import os
 
 from flask import Flask
 from . import db
+from . import main
 
 
 def create_app(test_config=None):
@@ -15,6 +16,7 @@ def create_app(test_config=None):
     )
 
     db.init_app(app)
+    app.register_blueprint(main.bp)
 
     if test_config is None:
         app.config.from_pyfile('config.py', silent=True)
